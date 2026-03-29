@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Mongolia — Skeleton</title>
+    <style>
+        :root {
+            --bg: #f6f7fb;
+            --text: #1d2939;
+            --accent: #2b6cb0;
+            --shadow: rgba(0, 0, 0, 0.12);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header, main, footer { padding: 2rem; }
+
+        .site-wrapper { max-width: 1100px; margin: 0 auto; }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        nav a { color: var(--text); margin-left: 1rem; text-decoration: none; font-weight: 600; }
+
+        .hero {
+            border-radius: 1rem;
+            background: white;
+            box-shadow: 0 10px 30px var(--shadow);
+            padding: 2.5rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+
+        .card {
+            background: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 6px 18px var(--shadow);
+            border: 1px solid #e2e8f0;
+            padding: 1.25rem;
+        }
+
+        .card h3 { margin-top: 0; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.6rem;
+            border: none;
+            background: var(--accent);
+            color: #fff;
+            cursor: pointer;
+            font-weight: 700;
+            text-decoration: none;
+            margin-top: 1rem;
+        }
+
+        footer { text-align: center; color: #4a5568; }
+
+        @media (max-width: 700px) {
+            header, main, footer { padding: 1rem; }
+            nav { flex-direction: column; gap: 0.75rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="site-wrapper">
+        <header>
+            <nav>
+                <strong>E-Mongolia</strong>
+                <div>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+
+            <section class="hero" id="home">
+                <h1>Welcome to E-Mongolia</h1>
+                <p>The web version of your app is now ready as a skeleton site. Use this as a base to add content, navigation, and media sections.</p>
+                <a href="#about" class="btn">Learn More</a>
+            </section>
+        </header>
+
+        <main>
+            <section id="about" class="card">
+                <h2>About</h2>
+                <p>This is the skeleton starting point. Replace or augment this with your real text, images, and video content. The conversion already moved existing assets (drawable/ and raw/) for direct use on the web.</p>
+            </section>
+
+            <section id="gallery" class="grid">
+                <article class="card">
+                    <h3>Intro Video</h3>
+                    <video controls width="100%" src="raw/intro.mp4"></video>
+                </article>
+                <article class="card">
+                    <h3>Loading Video</h3>
+                    <video controls width="100%" src="raw/loadingvideo.mp4"></video>
+                </article>
+                <article class="card">
+                    <h3>Image Preview</h3>
+                    <img src="drawable/pass0.png" alt="pass0" style="max-width:100%;border-radius:0.5rem;">
+                </article>
+            </section>
+
+            <section id="contact" class="card">
+                <h2>Contact</h2>
+                <p>Next steps: add a form, newsletter subscription, and link to your server endpoint or CMS.</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2026 E-Mongolia. Built as responsive site skeleton.</p>
+        </footer>
+    </div>
+</body>
+</html>
